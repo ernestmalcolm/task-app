@@ -6,6 +6,8 @@ import AddTask from "./components/AddTask";
 
 export const App = () => {
 
+  const [showAdd, setShowAdd] = useState(false)
+
   const [tasks, setTasks] = useState(
         [
             {
@@ -31,7 +33,9 @@ export const App = () => {
 
     // Add Task
     const addTask = (task) => {
-      console.log(task)
+      const id = Math.floor(Math.random() * 1000);
+      const newTask = {id, ...task};
+      setTasks([...tasks, newTask]);
     }
 
     // Delete Task
@@ -46,8 +50,9 @@ export const App = () => {
 
   return (
     <div className="container">
-      <Header title="Task Tracker" />
-      <AddTask />
+      <Header title="Task Tracker" onAdd={() => setShowAdd(!showAdd)}
+      showAdd={showAdd} />
+      {showAdd && <AddTask onAdd={addTask} showAddButton={showAdd} />}
       {tasks.length !==0 ? 
       <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> 
       : "No tasks to show"}

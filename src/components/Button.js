@@ -1,8 +1,7 @@
 const Button = (props) => {
+  return <button onClick={props.onClick} 
+  style={{backgroundColor: props.color}}
+  className="btn">{props.text}</button>;
+};
 
-    return (
-        <button onClick={props.onClick} className="btn">Add</button>
-    )
-}
-
-export default Button
+export default Button;
