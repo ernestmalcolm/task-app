@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "text": "Laundry",
+      "day": "Friday",
+      "reminder": true,
+      "id": 3
+    },
+    {
+      "text": "Take test",
+      "day": "Friday",
+      "reminder": true,
+      "id": 4
+    },
+    {
+      "text": "Hospital checkup",
+      "day": "Saturday",
+      "reminder": false,
+      "id": 5
+    }
+  ]
+}
