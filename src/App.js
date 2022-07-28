@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 import Footer from "./components/Footer";
 import About from "./components/About";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import TaskFilter from "./components/TaskFilter";
 
 export const App = () => {
   const [showAdd, setShowAdd] = useState(false);
 
   const [tasks, setTasks] = useState([])
-  // const [tasks, setTasks] = useRecoilState([]);
 
   useEffect(() => {
     const getTasks = async () => {
@@ -48,7 +48,7 @@ export const App = () => {
 
     const data = await res.json();
 
-    setTasks([...tasks, task]);
+    setTasks([...tasks, data]); 
 
     // const id = Math.floor(Math.random() * 1000);
     // const newTask = { id, ...task };
