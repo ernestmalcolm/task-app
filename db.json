@@ -4,19 +4,19 @@
       "text": "Laundry",
       "day": "Friday",
       "reminder": true,
+      "id": 2
+    },
+    {
+      "text": "Car wash",
+      "day": "Saturday",
+      "reminder": true,
       "id": 3
     },
     {
-      "text": "Take test",
-      "day": "Friday",
-      "reminder": true,
-      "id": 4
-    },
-    {
-      "text": "Hospital checkup",
-      "day": "Saturday",
+      "text": "Barber",
+      "day": "Sunday",
       "reminder": false,
-      "id": 5
+      "id": 4
     }
   ]
 }
