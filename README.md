@@ -1,3 +1,3 @@
 # Task Tracking Application using ReactJS
 
-image.png
+<img src="./task-tracker.png">
